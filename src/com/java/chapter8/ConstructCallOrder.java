@@ -4,7 +4,7 @@ import static com.thinker.log.Mylog.*;
 
 //有打印结果可知道：导出类与基类构造器直接调用顺序，其实想想继承机制，也知道为什么会有这个顺序。
 
-public class ConstrutCallOrder extends PortableLunch {
+public class ConstructCallOrder extends PortableLunch {
 
 	Meal m = new Meal();
 	Bread b = new Bread();
@@ -12,7 +12,7 @@ public class ConstrutCallOrder extends PortableLunch {
 	Lettuce l = new Lettuce();
 	
 	
-	public ConstrutCallOrder() {
+	public ConstructCallOrder() {
 		p("ConstrutCallOrder()");
 	}
 	
@@ -22,7 +22,7 @@ public class ConstrutCallOrder extends PortableLunch {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
-		new ConstrutCallOrder();
+		new ConstructCallOrder();
 	}
 
 }
