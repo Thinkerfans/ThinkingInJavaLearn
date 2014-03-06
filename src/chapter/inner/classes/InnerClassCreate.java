@@ -19,7 +19,7 @@ public class InnerClassCreate {
 	 **/
 	static class staticInnerClass {
 		public staticInnerClass() {
-			System.out.println("normal innner class------" + this);
+			System.out.println("static innner class------" + this);
 		}
 	}
 

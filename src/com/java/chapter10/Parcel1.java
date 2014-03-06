@@ -1,5 +1,7 @@
 package com.java.chapter10;
 
+import com.java.chapter10.InnerInterface.A;
+
 public class Parcel1 {
 
 	class Contents {
@@ -20,7 +22,7 @@ public class Parcel1 {
 			this.label = s;
 		}
 
-		public String readLabel() {
+		protected String readLabel() {
 			return label;
 		}
 	}
@@ -37,6 +39,7 @@ public class Parcel1 {
 	 */
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+
 
 		Parcel1 p = new Parcel1();
 		p.userInnerClass();
