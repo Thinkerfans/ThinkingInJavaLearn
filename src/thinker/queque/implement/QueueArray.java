@@ -21,7 +21,7 @@ public class QueueArray implements Queue {
 	
 	@Override
 	public int getSize() {	
-		return (capacity-tail+head) % capacity;
+		return (capacity+tail-head) % capacity;
 	}
 
 	@Override
