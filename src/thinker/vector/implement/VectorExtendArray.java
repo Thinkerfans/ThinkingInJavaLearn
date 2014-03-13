@@ -1,0 +1,73 @@
+package thinker.vector.implement;
+
+public class VectorExtendArray implements Vector {
+	
+	private  int  CAPACITY = 8;
+	Object[] arr;
+	int size;
+
+	public VectorExtendArray() {
+		arr = new Object[CAPACITY];
+		size =0;
+	}
+	
+	@Override
+	public int getSize() {
+		return size;
+	}
+
+	@Override
+	public boolean isEmpty() {
+		// TODO Auto-generated method stub
+		return size==0;
+	}
+
+	@Override
+	public Object insertAtRank(int r, Object o)
+			throws ExceptionBoundaryViolation {		
+		if(0>r || size<r)
+			throw new ExceptionBoundaryViolation(" out of boundary");
+		if(size>=CAPACITY)
+		{
+			CAPACITY =CAPACITY*2;
+			Object[] tem = new Object[CAPACITY];
+			for(int i =0;i<size ;i++){
+				tem[i] = arr[i];		
+			}
+			arr = tem;
+		}		
+		for(int i =size;i>r;i--)
+			arr[i] = arr[r-1];
+		arr[r] = o;
+		size++;
+		return o;
+	}
+
+	@Override
+	public Object removetAtRank(int r) throws ExceptionBoundaryViolation {
+		if(0>r || size<=r)
+			throw new ExceptionBoundaryViolation(" out of boundary");
+		Object o =  arr[r];
+		for(int i =r;i<size;i++)
+			arr[r]=arr[i+1];
+		size--;
+		return o;
+	}
+
+	@Override
+	public Object getAtRank(int r) throws ExceptionBoundaryViolation {
+		if(0>r || size<=r)
+			throw new ExceptionBoundaryViolation(" out of boundary");
+		return arr[r];
+	}
+
+	@Override
+	public Object replaceAtRank(int r, Object o)
+			throws ExceptionBoundaryViolation {
+		if(0>r || size<=r)
+			throw new ExceptionBoundaryViolation(" out of boundary");		
+		Object old = arr[r];
+		arr[r] = o;
+		return old;
+	}
+}
