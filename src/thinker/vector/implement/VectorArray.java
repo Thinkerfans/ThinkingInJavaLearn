@@ -64,5 +64,4 @@ public class VectorArray implements Vector {
 		arr[r] = o;
 		return old;
 	}
-
 }
