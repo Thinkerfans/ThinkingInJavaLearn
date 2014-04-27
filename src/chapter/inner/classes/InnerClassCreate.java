@@ -36,7 +36,7 @@ public class InnerClassCreate {
 			System.out.println("anonymous innner class------" + this);
 		}
 
-		@Override
+
 		public void printClassName() {
 			System.out.println(this.getClass().getName());
 		}
@@ -59,7 +59,7 @@ public class InnerClassCreate {
 				System.out.println("local innner class------" + this);
 			}
 
-			@Override
+		
 			public void printClassName() {
 				System.out.println(tag + "---------------\n"
 						+ this.getClass().getName());

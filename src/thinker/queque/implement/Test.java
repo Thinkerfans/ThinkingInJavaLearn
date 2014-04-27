@@ -1,6 +1,5 @@
 package thinker.queque.implement;
 
-import com.sun.jmx.remote.internal.ArrayQueue;
 
 public class Test {
 	

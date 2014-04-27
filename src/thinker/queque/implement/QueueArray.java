@@ -19,24 +19,24 @@ public class QueueArray implements Queue {
 		q = new Object[size];
 	}
 	
-	@Override
+
 	public int getSize() {	
 		return (capacity+tail-head) % capacity;
 	}
 
-	@Override
+
 	public boolean isEmpty() {
 		return tail==head;
 	}
 
-	@Override
+
 	public Object front() throws ExceptionEmptyQueue {
 		if(isEmpty())
 			throw new ExceptionEmptyQueue("empty queue ");
 		return q[head];
 	}
 
-	@Override
+
 	public void enqueue(Object o) throws ExceptionFullQueue {
 		if(getSize() == capacity)
 			throw new ExceptionFullQueue("full queue");
@@ -44,7 +44,7 @@ public class QueueArray implements Queue {
 		tail = (tail +1)% capacity;
 	}
 
-	@Override
+
 	public Object dequeue() throws ExceptionEmptyQueue {
 		if(isEmpty())
 			throw new ExceptionEmptyQueue("empty queue ");
@@ -54,7 +54,7 @@ public class QueueArray implements Queue {
 		return o;
 	}
 
-	@Override
+
 	public void Traversal() {	
 		for(int i = head;i<tail;i++)
 			System.out.println(q[i]+" ");

@@ -11,18 +11,18 @@ public class VectorArray implements Vector {
 		size =0;
 	}
 	
-	@Override
+
 	public int getSize() {
 		return size;
 	}
 
-	@Override
+
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
 		return size==0;
 	}
 
-	@Override
+
 	public Object insertAtRank(int r, Object o)
 			throws ExceptionBoundaryViolation {		
 		if(0>r || size<r)
@@ -37,7 +37,7 @@ public class VectorArray implements Vector {
 		return o;
 	}
 
-	@Override
+
 	public Object removetAtRank(int r) throws ExceptionBoundaryViolation {
 		if(0>r || size<=r)
 			throw new ExceptionBoundaryViolation(" out of boundary");
@@ -48,14 +48,14 @@ public class VectorArray implements Vector {
 		return o;
 	}
 
-	@Override
+
 	public Object getAtRank(int r) throws ExceptionBoundaryViolation {
 		if(0>r || size<=r)
 			throw new ExceptionBoundaryViolation(" out of boundary");
 		return arr[r];
 	}
 
-	@Override
+
 	public Object replaceAtRank(int r, Object o)
 			throws ExceptionBoundaryViolation {
 		if(0>r || size<=r)

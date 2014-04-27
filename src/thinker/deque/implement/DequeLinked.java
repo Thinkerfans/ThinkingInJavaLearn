@@ -18,19 +18,19 @@ public class DequeLinked implements Deque{
 	}
 	
 	
-	@Override
+
 	public int getSize() {
 		// TODO Auto-generated method stub
 		return size;
 	}
 
-	@Override
+
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
 		return size==0;
 	}
 
-	@Override
+
 	public Object first() throws ExceptionEmptyQueue {
 		if(isEmpty())
 			throw new ExceptionEmptyQueue("empty queue");
@@ -38,14 +38,14 @@ public class DequeLinked implements Deque{
 		return header.getNext().getElement();
 	}
 
-	@Override
+
 	public Object last() throws ExceptionEmptyQueue {
 		if(isEmpty())
 			throw new ExceptionEmptyQueue("empty queue");
 		return tailer.getPrev().getElement();
 	}
 
-	@Override
+
 	public void insertFirst(Object o) {
 		DLNode next = header.getNext();
 		DLNode first = new DLNode(o,header,next);
@@ -54,7 +54,7 @@ public class DequeLinked implements Deque{
 		size++;
 	}
 
-	@Override
+
 	public void insertLast(Object o) {
 		DLNode next = tailer.getPrev();
 		DLNode last = new DLNode(o,next,tailer);
@@ -63,7 +63,7 @@ public class DequeLinked implements Deque{
 		size++;		
 	}
 
-	@Override
+
 	public Object removeFist() throws ExceptionEmptyQueue {
 		if(isEmpty())
 			throw new ExceptionEmptyQueue("empty queue");
@@ -76,7 +76,7 @@ public class DequeLinked implements Deque{
 		return first.getElement();
 	}
 
-	@Override
+
 	public Object removeLast() throws ExceptionEmptyQueue {
 		if(isEmpty())
 			throw new ExceptionEmptyQueue("empty queue");

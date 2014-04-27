@@ -19,13 +19,13 @@ public class DLNode implements Position {
 	
 	}
 	
-	@Override
+
 	public Object getElement() {
 		// TODO Auto-generated method stub
 		return elem;
 	}
 
-	@Override
+
 	public Object setElement(Object o) {
 		// TODO Auto-generated method stub
 		Object last = elem;

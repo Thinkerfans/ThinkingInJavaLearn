@@ -1,7 +1,5 @@
 package com.java.chapter10;
 
-import javax.swing.text.AbstractDocument.Content;
-
 import com.java.chapter10.Parcel1.Contents;
 import com.java.chapter10.Parcel1.Destination;
 

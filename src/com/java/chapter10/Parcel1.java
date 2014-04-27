@@ -1,6 +1,5 @@
 package com.java.chapter10;
 
-import com.java.chapter10.InnerInterface.A;
 
 public class Parcel1 {
 

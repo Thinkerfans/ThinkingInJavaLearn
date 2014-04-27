@@ -14,12 +14,12 @@ public class Node implements Position {
 		next = n;
 	}
 
-	@Override
+
 	public Object getElement() {
 		return element;
 	}
 
-	@Override
+
 	public Object setElement(Object o) {
 		Object old = element;
 		element = o;

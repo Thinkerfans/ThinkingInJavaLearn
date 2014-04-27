@@ -14,26 +14,26 @@ public class StackLinked implements Stack{
 	}
 	
 	
-	@Override
+
 	public int getSize() {
 		// TODO Auto-generated method stub
 		return size;
 	}
 
-	@Override
+
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
 		return size==0;
 	}
 
-	@Override
+
 	public void push(Object o) {
 		Node next = new Node(o, top);
 		top= next;
 		size++;
 	}
 
-	@Override
+
 	public Object pop() throws ExceptionEmptyStack {
 		if(isEmpty())
 			throw new ExceptionEmptyStack("empty stack");
@@ -43,7 +43,7 @@ public class StackLinked implements Stack{
 		return o;
 	}
 
-	@Override
+
 	public Object top() throws ExceptionEmptyStack {
 		// TODO Auto-generated method stub
 		if(isEmpty())

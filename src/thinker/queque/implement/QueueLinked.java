@@ -17,19 +17,19 @@ public class QueueLinked implements Queue {
 	}
 	
 	
-	@Override
+
 	public int getSize() {
 		// TODO Auto-generated method stub
 		return size;
 	}
 
-	@Override
+
 	public boolean isEmpty() {
 		// TODO Auto-generated method stub
 		return 0==size;
 	}
 
-	@Override
+
 	public Object front() throws ExceptionEmptyQueue {
 		if(isEmpty())
 			throw new ExceptionEmptyQueue("empty queue");
@@ -37,7 +37,7 @@ public class QueueLinked implements Queue {
 		return head.getElement();
 	}
 
-	@Override
+
 	public void enqueue(Object o) throws ExceptionFullQueue {
 		Node next = new Node(o,null);
 		if(isEmpty())
@@ -47,7 +47,7 @@ public class QueueLinked implements Queue {
 		size++;
 	}
 
-	@Override
+
 	public Object dequeue() throws ExceptionEmptyQueue {
 		if(isEmpty())
 			throw new ExceptionEmptyQueue("empty queue");
@@ -59,7 +59,7 @@ public class QueueLinked implements Queue {
 		return o;
 	}
 
-	@Override
+
 	public void Traversal() {	
 		Node p = head;
 		while(null !=p){

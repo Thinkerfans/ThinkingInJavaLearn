@@ -17,24 +17,24 @@ public class StackArray implements Stack {
 		array = new Object[size];
 	}
 
-	@Override
+
 	public int getSize() {
 		return top+1;
 	}
 
-	@Override
+
 	public boolean isEmpty() {
 		return 0>top;
 	}
 	
-	@Override
+
 	public void push(Object o) {
 		if(getSize() == capacity)
 			throw new ExceptionFullStack("stack full exception");
 		array[++top] = o;		
 	}
 	
-	@Override
+
 	public Object pop() throws ExceptionEmptyStack {
 		if(isEmpty())
 			throw new ExceptionEmptyStack("stack empty exception");
@@ -43,7 +43,7 @@ public class StackArray implements Stack {
 		return o;		
 	}
 	
-	@Override
+
 	public Object top() throws ExceptionEmptyStack {
 		if(isEmpty())
 			throw new ExceptionEmptyStack("stack empty exception");
