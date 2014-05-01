@@ -1,6 +1,6 @@
 package com.java.arithmetic;
 
-public class SequenceSearch {
+public class OrderSearch {
 	
 	public static int sequenceSearch(int[] src,int target){		
 		for(int i =0;i<src.length;i++)

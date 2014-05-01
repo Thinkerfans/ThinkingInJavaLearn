@@ -1,14 +1,14 @@
 package com.java.arithmetic;
 
-public class BinarySort {
+public class BinarySearch {
 	
-	static int binarySort(int[] array, int value) {
+	static int binarySort(int[] array, int target) {
 		int low = 0, high = array.length - 1, middle = 0;
 		while (low <= high) {
 			middle = (low + high) / 2;
-			if (value == array[middle])
+			if (target == array[middle])
 				return middle;
-			else if (value > array[middle])
+			else if (target > array[middle])
 				low = middle + 1;
 			else
 				high = middle - 1;
